@@ -10,6 +10,9 @@ See: [Decide about the Bareos release to use](https://docs.bareos.org/Introducti
 Based on opensuse/leap:15.6 as per BareOS instructions:
 [SUSE Linux Enterprise Server (SLES), openSUSE](https://docs.bareos.org/IntroductionAndTutorial/InstallingBareos.html#install-on-suse-based-linux-distributions)
 
+Inspired & informed by the many years of BareOS container work done by Marc Benslahdine https://github.com/barcus/bareos.
+Here we take a monolithic approach, where-as Marc's docker image definitions are quite the opposite.
+
 ## Local Build
 - -t tag <name>
 - . indicates from-current directory
