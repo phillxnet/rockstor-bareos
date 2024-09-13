@@ -33,14 +33,17 @@ if [ ! -f  /etc/bareos/bareos-install.control ]; then
   # The 'bareos-client' meta package = bareos-bconsole bareos-filedaemon
   # rpm -qp bareos-client-23.0.4~pre219.fcc1a62ef-118.x86_64.rpm --requires
 
-
-
   # Director & Storage daemon packages
   # zypper install bareos-director bareos-storage
+
   # Director local Client/file daemon: https://docs.bareos.org/IntroductionAndTutorial/InstallingBareosClient.html
   # zypper install bareos-client
-  # Web-UI https://docs.bareos.org/IntroductionAndTutorial/BareosWebui.html (defaults to using Apache)
-  zypper install bareos-webui
+
+  # Web-UI
+  # https://docs.bareos.org/IntroductionAndTutorial/BareosWebui.html (defaults to using Apache)
+  # rpm -qp bareos-webui-23.0.4~pre219.fcc1a62ef-118.x86_64.rpm --requires
+  # httpd, & php >= 7.0.0
+  zypper --non-interactive install bareos-webui
 
   # Control file
   touch /etc/bareos/bareos-install.control
